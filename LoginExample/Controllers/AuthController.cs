@@ -95,5 +95,29 @@ namespace LoginExample.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        public ActionResult CrearEstado()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult CrearEstado(Estado estado)
+        {
+            try
+            {
+                db.Estado.Add(estado);
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            catch(Exception ex)
+            {
+                return View();
+            }
+            
+        }
     }
 }

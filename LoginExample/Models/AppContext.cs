@@ -17,7 +17,7 @@ namespace LoginExample.Models
 
     public class AppContext : IdentityDbContext<UserProfile>
     {
-        public AppContext() : base("DefaultConnection") { }
+        public AppContext() : base("name=DevConnection") { }
 
         public static AppContext Create()
         {
