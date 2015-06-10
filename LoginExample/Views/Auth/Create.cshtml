@@ -1,0 +1,23 @@
+﻿@model  LoginExample.Models.RegisterVM
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Nombre:</label>
+    @Html.TextBoxFor(x => x.Name)
+    <label>Apellido</label>
+    @Html.TextBoxFor(x => x.LastName)
+    <br />
+    <label>Mail:</label>
+    @Html.TextBoxFor(x => x.Email)
+    <label>Password</label>
+    @Html.TextBoxFor(x => x.password)
+    <br />
+    <input type="submit" value="Crear" />
+}
+
+@Html.ValidationSummary(true)

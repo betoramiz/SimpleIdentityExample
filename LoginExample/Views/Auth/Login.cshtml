@@ -1,0 +1,22 @@
+﻿@model LoginExample.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Correo:</label>
+    @Html.TextBoxFor(x => x.Mail);
+    <br />
+    <label>Contraseña:</label>
+    @Html.TextBoxFor(x => x.Password);
+    <br />
+    <label>Confirmar contraseña:</label>
+    @Html.TextBoxFor(x => x.ConfirmPassword);
+    <br />
+
+    <input type="submit" value="Entrar" />
+}
+
